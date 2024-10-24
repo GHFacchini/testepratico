@@ -16,7 +16,7 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', compact('user'));
 })->middleware('auth');
 
 Route::get('/home', function () {
