@@ -16,6 +16,7 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
+    $user = Auth::user();
     return view('home', compact('user'));
 })->middleware('auth');
 
